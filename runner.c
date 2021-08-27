@@ -373,6 +373,7 @@ int login()
     // fclose(FEP);
     if(FEP==NULL){
         printf("FILE CANNOT OPEN");
+	    return 0;
     }else{
                // fscanf(FEP,"%s",pass);
         
@@ -381,7 +382,7 @@ int login()
              
     }
    //pass[i]='\0';
-    printf("%s",pass);
+   // printf("%s",pass);
     do
 {
 	
@@ -409,13 +410,14 @@ int login()
 	{
 		printf("\n        SORRY !!!!  LOGIN IS UNSUCESSFUL");
 		a++;
-		getch();//holds the screen	
+		getch();//holds the screen
+		return 0;
 	}
 }
 	while(a<=4);
 	if (a>4)
 	{
-		printf(" \nSorry you have entered the wrong username and password for four time!!!!TRY AGAIN LATER");
+		printf(" \nSorry you have entered the wrong username and password for more than four time!!!!TRY AGAIN LATER");
 		getch();
         return 0;
 		}
